@@ -68,5 +68,49 @@ Main components include:
 - Duration unit dimension
 The model separates descriptive dimensions from the main analytical content table and allows slicers and measures to propagate filters through relationships.
 
+# Excel Features Used
+Feature                                                     	Purpose
+Power Query	                                                  ETL and data transformation
+Excel Data Model	                                            Relational analytical model
+Relationships	                                                Filter propagation between tables
+DAX	                                                          Reusable analytical measures
+PivotTables	                                                  Aggregation and analytical summaries
+PivotCharts	                                                  Interactive visualizations
+Slicers	                                                      Interactive categorical filtering
+Timeline	                                                    Date-based filtering
+Dynamic Arrays	                                              Dynamic Top-N and analytical outputs
+LET	                                                          Readable multi-step formulas
+FILTER	                                                      Context-based filtering
+SORT	                                                        Ranking and ordering
+TAKE	                                                        Dynamic Top-N extraction
+HSTACK	                                                      Combining dynamic outputs
+UNIQUE	                                                      Distinct-value analysis
+XLOOKUP	                                                      Title-level attribute retrieval
+Data Validation	                                              Interactive title selection
+Hyperlinks	                                                  Dashboard navigation
+Sheet Protection	                                            Protecting analytical/model layers
+
+# Key Design Decisions
+## Why Power Query?
+To keep data cleaning and transformation separate from analytical calculations.
+
+## Why a Data Model?
+To create a reusable relational structure and allow multiple analytical components to share the same dimensions and measures.
+
+## Why DAX measures?
+To avoid repeating business logic across PivotTables and ensure consistent calculations.
+
+## Why Slicers and Timeline?
+To provide interactive filtering without requiring users to manipulate PivotTables manually.
+
+## Why Dynamic Arrays?
+To build flexible calculations such as dynamic Top-N analysis and title-level outputs.
+
+## Why a separate DETAILS page?
+The dashboard answers:
+"What is happening?"
+
+The Details page answers:
+"Which content is responsible for it?"
 ### Simplified Model
 Used Star Scheme in the data Modelling part with one to many cardinalities. 
